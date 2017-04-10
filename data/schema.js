@@ -1,3 +1,4 @@
+// @flow
 module.exports = `
 type User {
   id: Int!
