@@ -8,12 +8,12 @@ const posts = [
   },
   {
     id: 2,
-    title: 'how tom got hist first 1 million 👌',
+    title: 'how tom got hist first 1 million 👍',
     userId: 2
   },
   {
     id: 3,
-    title: 'how sam got his last 1 million 👌',
+    title: 'how sam got his last 1 million 😎',
     userId: 3
   }
 ]

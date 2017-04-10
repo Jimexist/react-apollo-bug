@@ -18,6 +18,7 @@ class App extends React.Component {
     return (
       <div>
         <h1>Welcome!</h1>
+        <p>Click on <em>Posts</em> and then select a post!</p>
         <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode={'horizontal'}>
           <Menu.Item key={'posts'}>
             <Link to={'/posts'}>
