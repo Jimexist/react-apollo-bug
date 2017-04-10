@@ -1,0 +1,14 @@
+[ignore]
+.*/node_modules/draft-js/.*
+
+[options]
+module.system=haste
+module.use_strict=true
+module.file_ext=.js
+module.file_ext=.jsx
+module.file_ext=.json
+module.file_ext=.css
+
+esproposal.class_static_fields=enable
+suppress_type=$FlowIssue
+suppress_comment=\\(.\\|\n\\)*\\$FlowFixMe

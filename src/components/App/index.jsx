@@ -1,15 +1,36 @@
-// @flow
 import React from 'react'
-import PropTypes from 'prop-types'
+import { Link, Route } from 'react-router-dom'
+import { Menu, Icon } from 'antd'
+import Posts from '../Posts'
 
 class App extends React.Component {
-  render () {
-    return <div>app</div>
+  state = {
+    current: 'posts'
   }
-}
 
-App.propTypes = {
-  children: PropTypes.array
+  handleClick = (e) => {
+    this.setState({
+      current: e.key
+    })
+  }
+
+  render () {
+    return (
+      <div>
+        <h1>Welcome!</h1>
+        <Menu onClick={this.handleClick} selectedKeys={[this.state.current]} mode={'horizontal'}>
+          <Menu.Item key={'posts'}>
+            <Link to={'/posts'}>
+              <Icon type='mail' /> Posts
+            </Link>
+          </Menu.Item>
+        </Menu>
+        <div>
+          <Route path='/posts' component={Posts} />
+        </div>
+      </div>
+    )
+  }
 }
 
 export default App

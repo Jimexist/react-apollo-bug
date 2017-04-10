@@ -16,6 +16,24 @@ module.exports = {
           path.resolve(__dirname, 'src')
         ],
         loader: 'babel-loader'
+      },
+      {
+        test: /\.css$/,
+        use: [
+          { 'loader': 'style-loader' },
+          { 'loader': 'css-loader' }
+        ]
+      },
+      {
+        test: /\.less$/,
+        include: [
+          path.resolve(__dirname, 'node_modules')
+        ],
+        use: [
+          { loader: 'style-loader' },
+          { loader: 'css-loader' },
+          { loader: 'less-loader' }
+        ]
       }
     ]
   },

@@ -1,7 +1,14 @@
 {
   "presets": [
     "flow",
-    "env",
-    "react"
+    "react",
+    "env"
+  ],
+  "plugins": [
+    ["transform-class-properties"],
+    ["import", {
+      "libraryName": "antd",
+      "style": true
+    }]
   ]
 }

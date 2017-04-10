@@ -11,7 +11,8 @@ type User {
 type Post {
   id: Int!
   title: String
-  user: User
+  userId: Int!
+  author: User
 }
 
 type Query {
